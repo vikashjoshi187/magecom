@@ -1,0 +1,338 @@
+/* CSS RESET */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* FONTS */
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"); */
+
+/* VARIBLES */
+:root {
+  --PRIMARY-COLOR: #ff7518;
+  --BORDER-RADUIS: 20px;
+  --PADDING: 1.3vw;
+  --RELWAY-FONT: "Raleway";
+  --SPACE-GROTESK-FONT: "Space Grotesk", sans-serif;
+}
+
+@media (min-width: 0px) {
+  :root {
+    --TEXT-EXTRA-SMALL-FONT: clamp(1rem, 1.3vw, 4rem);
+    --TEXT-SMALL-FONT: clamp(1rem, 1.5vw, 2.3rem);
+    --TEXT-MIDIUM-FONT: clamp(1.5rem, 2vw, 3rem);
+    --TEXT-LARGE-FONT: clamp(2rem, 5vw, 6rem);
+    --TEXT-EXTRA-LARGE-FONT: clamp(3rem, 9vw, 12rem);
+  }
+}
+
+.small-device-nav{
+  display: none;
+}
+@media (max-width: 992px) {
+
+  .big-device-nav {
+    display: none;
+  }
+
+  .small-device-nav{
+    display: block;
+  }
+}
+
+/* @media (min-width: 576px) {
+  :root {
+    --TEXT-EXTRA-LARGE-FONT: clamp(5rem, 10vw, 12rem);
+  }
+}
+
+
+@media (min-width: 768px) {
+  :root {
+    --TEXT-EXTRA-LARGE-FONT: clamp(5rem, 10vw, 15rem);
+  }
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+  :root {
+    --TEXT-EXTRA-LARGE-FONT: clamp(5rem, 10vw, 21rem);
+  }
+}
+
+
+@media (min-width: 1400px) {
+  :root {
+    --TEXT-EXTRA-LARGE-FONT: clamp(5rem, 10vw, 24rem);
+  }
+} */
+
+body {
+  min-height: 100vh;
+  font-family: var(--SPACE-GROTESK-FONT);
+  scroll-behavior: smooth;
+}
+/* 
+.big-device-nav {
+  display: none;
+} */
+
+header {
+  background-color: whitesmoke;
+  display: flex;
+  padding: var(--PADDING);
+  justify-content: space-between;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+}
+header div img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 10px;
+  text-align: center;
+  padding: 0px;
+}
+
+#small-nav ul li {
+  margin-top: 2vh;
+}
+
+.nav-anchor{
+  text-decoration: none;
+  color: black;
+}
+
+main div h1 {
+  font-size: var(--TEXT-EXTRA-LARGE-FONT);
+  font-family: var(--SPACE-GROTESK-FONT);
+  font-weight: 400;
+}
+
+#small-nav{
+  position: absolute;
+  /* padding: 20px; */
+  background-color: #ff7518;
+  width: 100vw;
+  top: 0;
+  height: 0vh;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+#small-nav div{
+   overflow: hidden;
+}
+#small-nav div ul{
+  list-style: none;
+}
+
+.bg-img-txt {
+  background-image: url("../images/marker-colors.jpg");
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: cover;
+  font-weight: 700;
+  margin-left: 1vw;
+}
+
+.page1 {
+  padding-top: calc(var(--PADDING));
+}
+
+.page1 div {
+  width: 100%;
+  /* border: 1px solid red; */
+  overflow: hidden;
+}
+
+.page1 div:nth-child(2) {
+  text-align: end;
+}
+.page1 div:last-child {
+  text-align: center;
+}
+
+.page2 {
+  padding-bottom: 5vw;
+}
+
+.page-2-row div p {
+  font-size: 1.5em;
+}
+.quotespan {
+  display: block;
+  text-align: center;
+  background: var(--PRIMARY-COLOR);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.quotespan div p {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 1em;
+}
+
+.hr-div {
+  border-top: 3px solid black;
+}
+
+
+.page-8 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.page-8 {
+  color: whitesmoke;
+}
+
+.hr-div-w {
+  border-top: 3px solid whitesmoke;
+  height: 20px;
+}
+
+.text-large {
+  font-size: var(--TEXT-LARGE-FONT);
+}
+.text-medium{
+  font-size: var(--TEXT-MIDIUM-FONT);
+}
+.text-small{
+  font-size: var(--TEXT-SMALL-FONT);
+}
+.text-extra-small{
+  font-size: var(--TEXT-EXTRA-SMALL-FONT);
+}
+
+.animated-h2 {
+  overflow: hidden;
+}
+
+.animated-h-div {
+  overflow: hidden;
+}
+
+.bg-tilt-image {
+  position: absolute;
+  background-color: #ff7518;
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  background-image: url(../images/marker-colors.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.animated-icon {
+  background-color: var(--PRIMARY-COLOR);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+}
+
+.filler-div {
+  position: absolute;
+  background-color: #ff7518;
+  height: 100%;
+  z-index: -1;
+}
+
+.hover-card:hover .hr-div {
+  width: 0%;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  color: whitesmoke;
+  height: 50px;
+  padding: 20px;
+}
+
+input::placeholder {
+  color: whitesmoke;
+}
+
+input:focus {
+  border: none;
+}
+
+form button {
+  background-color: var(--PRIMARY-COLOR);
+  padding: 10px 20px;
+  border: none;
+  color: whitesmoke;
+}
+
+.subscribe-Box {
+  background-color: var(--PRIMARY-COLOR);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.subscribe-Box button {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  background-color: whitesmoke;
+  color: var(--PRIMARY-COLOR);
+}
+
+.auditoriumImgBox {
+  position: relative;
+}
+.auditoriumImgBox img {
+  width: 75%;
+}
+.playIcon {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: var(--PRIMARY-COLOR);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  top: 40%;
+  right: 20%;
+}
+.animated-anchors{
+  width: fit-content;
+  padding-right: 20px;
+}
